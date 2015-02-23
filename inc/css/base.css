@@ -189,7 +189,7 @@ table {
 th {
 	font-weight: bold;
 }
-img {
+img, video {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 }

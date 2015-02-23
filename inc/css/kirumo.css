@@ -85,8 +85,11 @@ table tr th, table tr td {
 a,
 a:active,
 a:visited,
+a:visited:hover,
+a:hover,
 .site-title a:hover,
-.main-navigation a:hover {
+.main-navigation a:hover,
+.footer-wrap a:hover{
 	color: #0074a2;
 	-webkit-transition: color .2s linear;
 	-moz-transition: color .2s linear;
@@ -112,8 +115,18 @@ input[type='submit']:hover,
 	transition: opacity .2s linear;
 }
 
-a:hover {
-	color: #555;
+#primary a,
+#secondary a {
+	opacity: 1;
+	-webkit-transition: opacity .2s linear;
+	-moz-transition: opacity .2s linear;
+	-ms-transition: opacity .2s linear;
+	transition: opacity .2s linear;
+}
+
+#primary a:hover,
+#secondary a:hover {
+	opacity: 0.7;
 }
 
 /* Colors */
@@ -178,19 +191,7 @@ img[class*='wp-image'] {
 
 #site-navigation .sub-menu,
 #mobile-menu ul ul li  {
-	background: #3a3a3a;
-}
-
-#mobile-menu ul ul ul li {
-	background: #414141;
-}
-
-#mobile-menu ul ul ul ul li {
-	background: #484848;
-}
-
-#mobile-menu ul ul ul ul ul li {
-	background: #4f4f4f;
+	background: rgba( 255, 255, 255, 0.05 );
 }
 
 .footer-wrap.border,
@@ -218,6 +219,10 @@ img[class*='wp-image'] {
 
 .site-branding a:hover {
 	text-decoration: none;
+}
+
+#masthead img.site-title {
+	margin-top: 1em;
 }
 
 .no-tagline .site-title {
@@ -299,6 +304,12 @@ h1.entry-title {
 
 .post .wp-post-image {
 	margin-top: 1em;
+}
+
+img[class^='wp-image'],
+img[class*='wp-image'] {
+	padding: 2px;
+	border: 1px solid #ddd;
 }
 
 .vertical-image {

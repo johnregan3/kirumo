@@ -159,6 +159,11 @@ require get_template_directory() . '/inc/customizer/custom-color.php';
 require get_template_directory() . '/inc/customizer/custom-footer.php';
 
 /*
+ * Implement the Custom Header/Footer colors.
+ */
+require get_template_directory() . '/inc/customizer/custom-header-footer-color.php';
+
+/*
  * Include custom walkers for menus
  */
 require get_template_directory() . '/inc/custom-walkers.php';

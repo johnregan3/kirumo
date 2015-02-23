@@ -17,10 +17,10 @@ function kirumo_customize_register_color( $wp_customize ) {
 	$wp_customize->add_setting(
 		'color_primary',
 		array(
-			'default'              => '0074a2',
-			'type'                 => 'theme_mod',
-			'capability'           => 'edit_theme_options',
-			'transport'            => 'postMessage',
+			'default'    => '0074a2',
+			'type'       => 'theme_mod',
+			'capability' => 'edit_theme_options',
+			'transport'  => 'postMessage',
 		)
 	);
 
@@ -55,27 +55,37 @@ if ( ! function_exists( 'kirumo_header_style' ) ) :
 		<?php if ( '' == $primary_color ) : ?>
 			a,
 			a:active,
+			a:hover,
 			a:visited,
+			a:visited:hover,
 			.site-title a:hover,
-			.main-navigation a:hover {
+			.main-navigation a:hover,
+			.footer-wrap a:hover {
 				color: #0074a2;
 			}
 			.comment-list .comment-reply-link:hover,
 			a.button,
-			a.button:hover {
+			a.button:hover,
+			button:hover,
+			input[type="submit"]:hover {
 				background: #0074a2;
 			}
 		<?php else : ?>
 			a,
 			a:active,
+			a:hover,
 			a:visited,
+			a:visited:hover,
 			.site-title a:hover,
-			.main-navigation a:hover {
+			.main-navigation a:hover,
+			.footer-wrap a:hover {
 				color: <?php echo $primary_color; ?>;
 			}
 			.comment-list .comment-reply-link:hover,
 			a.button,
-			a.button:hover {
+			a.button:hover,
+			button:hover,
+			input[type="submit"]:hover {
 				background: <?php echo $primary_color; ?>;
 			}
 		<?php endif; ?>

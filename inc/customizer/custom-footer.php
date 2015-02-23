@@ -25,7 +25,14 @@ function kirumo_footer_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'custom_footer', array(
 			'default' => '<a href="http://wordpress.org/" rel="generator" class="genericon genericon-wordpress" title="Proudly Powered by WordPress"></a> Theme: Kirumo by <a href="http://johnregan3.com" rel="designer">johnregan3</a>.',
-			)
+		)
+	);
+
+	$wp_customize->add_section(
+		'footer_text' , array(
+		'title' => __( 'Footer Text', 'kirumo' ),
+		'priority' => 80,
+		)
 	);
 
 	$wp_customize->add_control(
@@ -35,12 +42,6 @@ function kirumo_footer_customize_register( $wp_customize ) {
 				'section' => 'footer_text',
 				'settings' => 'custom_footer',
 			)
-		)
-	);
-
-	$wp_customize->add_section(
-		'footer_text' , array(
-		'title' => __( 'Footer Text', 'kirumo' ),
 		)
 	);
 

@@ -3,7 +3,7 @@ Theme URI: http://kirumo.johnregan3.com
 Author: John Regan
 Author URI: http://johnregan3.me
 Description: Kirumo is a simple reponsive blogging theme with an elegant sliding mobile menu.  This theme supports custom background colors and images, as well as a custom accent (link) color.  One if its unique features is a full-width page template with a horizontal row of three widgets below.  It also features formatting for all post formats, RTL layouts, and vertical featured images.  Download Kirumo and take it for a test drive!
-Version: 0.2.1
+Version: 0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: kirumo
@@ -36,6 +36,16 @@ and Blueprint http://www.blueprintcss.org/
 
 
 Changelog
+
+== 0.3 ==
+- Customizable Header/Footer color
+- Properly placed Header Image
+- Changed "Footer Text" position in Customizer
+- Improved Mobile Menu submenu backgrounds
+- Improved link color handling
+- Post images borders & small padding
+- <video> scale with screen size
+- link opacity chagnes on hover
 
 == 0.2.1 ==
 - Rewording readme.txt
