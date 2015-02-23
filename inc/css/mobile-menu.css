@@ -27,6 +27,10 @@
 	list-style: none;
 }
 
+#mobile-menu ul ul li  {
+	background: rgba( 255, 255, 255, 0.05 );
+}
+
 #mobile-menu ul li span {
 	display: inline-block;
 	padding: 1em;

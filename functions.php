@@ -148,6 +148,12 @@ require get_template_directory() . '/inc/customizer/customizer.php';
  */
 require get_template_directory() . '/inc/customizer/custom-header.php';
 
+/*
+ * Implement the Custom Logo colors.
+ */
+require get_template_directory() . '/inc/customizer/custom-logo.php';
+
+
 /**
  * Implement the Custom Color feature.
  */
@@ -162,6 +168,11 @@ require get_template_directory() . '/inc/customizer/custom-footer.php';
  * Implement the Custom Header/Footer colors.
  */
 require get_template_directory() . '/inc/customizer/custom-header-footer-color.php';
+
+/*
+ * Implement the Custom Kirumo options.
+ */
+require get_template_directory() . '/inc/customizer/custom-kirumo.php';
 
 /*
  * Include custom walkers for menus

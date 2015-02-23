@@ -18,7 +18,11 @@ $format = get_post_format() ? get_post_format() : 'standard' ;
 		} ?>
 
 	<div class="entry-content">
-		<span class="genericon genericon-<?php echo $format ?> post-format-icon"></span><div class="post-format-content"><?php the_content( __( 'Continue reading <span class="genericon genericon-next"></span>', 'kirumo' ) ); ?></div>
+		<?php $icons = get_theme_mod( 'kirumo_post_format_icons' );
+		if ( empty( $icons ) || 'show' == $icons ) : ?>
+			<span class="genericon genericon-<?php echo $format ?> post-format-icon"></span>
+		<?php endif; ?>
+		<div class="post-format-content <?php echo esc_html( $icons ) ?>"><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'kirumo' ) ); ?></div>
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'kirumo' ),

@@ -180,6 +180,7 @@ img[class*='wp-image'] {
 #mobile-menu,
 .mobile-header,
 #masthead,
+#site-navigation .sub-menu,
 .footer-wrap {
 	background: #333;
 }
@@ -187,11 +188,6 @@ img[class*='wp-image'] {
 #tertiary,
 #colophon {
 	color: #777;
-}
-
-#site-navigation .sub-menu,
-#mobile-menu ul ul li  {
-	background: rgba( 255, 255, 255, 0.05 );
 }
 
 .footer-wrap.border,
@@ -342,6 +338,10 @@ img[class*='wp-image'] {
 
 .post-format-content {
 	margin-left: 3em;
+}
+
+.post-format-content.hide {
+	margin-left: 0;
 }
 
 .format-link .post-format-content a {

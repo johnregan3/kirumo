@@ -37,12 +37,32 @@
 	wp.customize( 'header_footer_color', function( value ) {
 		value.bind( function( to ) {
 			if ( '' === to ) {
-				$( '#mobile-menu, .mobile-header, #masthead, .footer-wrap, #nav-toggle, button, a.button, input[type="button"], input[type="reset"], input[type="submit"]' ).css( {
+				$( '#mobile-menu, .mobile-header, #site-navigation .sub-menu, #masthead, .footer-wrap, #nav-toggle, button, a.button, input[type="button"], input[type="reset"], input[type="submit"]' ).css( {
 					'background-color': '#333333'
 				} );
 			} else {
-				$( '#mobile-menu, .mobile-header, #masthead, .footer-wrap, #nav-toggle, button, a.button, input[type="button"], input[type="reset"], ' ).css( {
+				$( '#mobile-menu, .mobile-header, #site-navigation .sub-menu, #masthead, .footer-wrap, #nav-toggle, button, a.button, input[type="button"], input[type="reset"], input[type="submit"]' ).css( {
 					'background-color': to
+				} );
+			}
+		} );
+	} );
+	//Post Format Icons
+	wp.customize( 'kirumo_post_format_icons', function( value ) {
+		value.bind( function( to ) {
+			if ( 'hide' === to ) {
+				$( '.post-format-icon' ).css( {
+					'display': 'none'
+				} );
+				$( '.post-format-content' ).css( {
+					'margin-left': '0'
+				} );
+			} else {
+				$( '.post-format-icon' ).css( {
+					'display': 'block'
+				} );
+				$( '.post-format-content' ).css( {
+					'margin-left': '3em'
 				} );
 			}
 		} );

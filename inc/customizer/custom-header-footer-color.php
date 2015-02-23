@@ -17,7 +17,7 @@ function kirumo_customize_register_header_footer_color( $wp_customize ) {
 	$wp_customize->add_setting(
 		'header_footer_color',
 		array(
-			'default'    => '333333',
+			'default'    => '#333333',
 			'type'       => 'theme_mod',
 			'capability' => 'edit_theme_options',
 			'transport'  => 'postMessage',
@@ -52,10 +52,11 @@ if ( ! function_exists( 'kirumo_header_footer_color' ) ) :
 		$header_footer_color = get_theme_mod( 'header_footer_color' ); ?>
 
 		<style type="text/css">
-		<?php if ( '' == $header_footer_color ) : ?>
+		<?php $header_footer_color = ( empty( $header_footer_color ) ) ? '#333333' : $header_footer_color; ?>
 			#mobile-menu,
 			.mobile-header,
 			#masthead,
+			#site-navigation .sub-menu,
 			.footer-wrap,
 			#nav-toggle,
 			button,
@@ -63,21 +64,8 @@ if ( ! function_exists( 'kirumo_header_footer_color' ) ) :
 			input[type="button"],
 			input[type="reset"],
 			input[type="submit"] {
-				background: #333;
+				background: <?php echo $header_footer_color; ?>;
 			}
-		<?php else : ?>
-			#mobile-menu,
-			.mobile-header,
-			#masthead,
-			.footer-wrap,
-			#nav-toggle, button,
-			a.button,
-			input[type="button"],
-			input[type="reset"],
-			input[type="submit"] {
-				background: <?php echo $header_footer_color; ?>;;
-			}
-		<?php endif; ?>
 		</style>
 		<?php
 	}
