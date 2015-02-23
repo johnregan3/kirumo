@@ -1,0 +1,180 @@
+/*
+Theme Name: Kirumo
+
+Layout for RTL Environments
+*/
+
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+#mobile-menu {
+	float: right;
+	margin-left: 0;
+	margin-right: -100%;
+}
+
+.active-nav #mobile-menu {
+	margin-right: 0;
+}
+
+#nav-toggle {
+	left: auto;
+	right: 0;
+}
+
+.active-nav #nav-toggle {
+	left: auto;
+	right: 80%;
+}
+
+.active-nav #page-wrap {
+	margin-left: -100%;
+	margin-right: 0;
+}
+
+
+#nav-toggle h1 {
+	float: left;
+	margin-left: .75em;
+	margin-right: 0;
+}
+
+.mobile-header {
+	text-align: left;
+	padding-right: 0;
+	padding-left: 2em;
+}
+
+.site-branding {
+	float: right;
+}
+
+#site-navigation {
+	float: left;
+}
+
+#site-navigation .menu > li > a {
+	margin-left: 0;
+	margin-right: 2em;
+}
+
+#site-navigation .sub-menu {
+	margin-left: 0;
+	margin-right: 2em;
+}
+
+.main-navigation li {
+	float: right;
+}
+
+.main-navigation ul ul {
+	left: auto;
+	right: 0;
+}
+
+#site-navigation .menu > .menu-item-has-children > a .arrow,
+#site-navigation .sub-menu > .menu-item-has-children > a .arrow {
+	float: left;
+}
+
+#site-navigation .sub-menu > .menu-item-has-children > a .arrow:before {
+	padding-left: 1.55em;
+	padding-right: 0;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2)
+}
+
+#primary {
+	float: right;
+	margin-left: 1%;
+	margin-right: 0;
+}
+
+.left-sidebar #primary {
+	margin-left: 0;
+	margin-right: 1%;
+}
+
+.left-sidebar #secondary {
+	margin-left: 8%;
+	margin-right: 0;
+}
+
+.vertical-image {
+	float: left;
+	margin-left: 0;
+	margin-right: 2%;
+}
+
+.genericon.post-format-icon {
+	float: right;
+}
+
+.post-format-content {
+	margin-left: 0;
+	margin-right: 3em;
+}
+
+.entry-content .genericon-audio,
+.entry-content .genericon-link,
+.entry-content .genericon-video {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
+}
+
+.comments-link .genericon {
+	margin-left: .5em;
+	margin-right: 0;
+}
+
+#secondary {
+	float: right;
+	margin-left: 0;
+	margin-right: 8%;
+}
+
+#secondary .widget ul,
+#tertiary .widget ul {
+	margin-right: 0;
+}
+
+.site-info {
+	float: right;
+}
+
+.social-menu ul {
+	float: left;
+}
+
+
+/* Elements */
+ul, ol {
+	margin: 0 3em 1.5em 0;
+}
+
+
+[class*="navigation"] .nav-previous {
+	float: right;
+}
+
+[class*="navigation"] .nav-next {
+	float: left;
+}
+
+.nav-previous .genericon,
+.nav-next .genericon {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
+}
